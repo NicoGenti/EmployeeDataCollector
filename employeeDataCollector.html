@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dataset</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Add Employee</h2>
+    <div class="input-field">
+        <label for="workerId">Worker ID:</label>
+        <input type="text" id="workerId">
+    </div>
+    <div class="input-field">
+        <label for="legalEntity">Legal Entity:</label>
+        <select id="legalEntity">
+            <option value="Entity 1">Entity 1</option>
+            <option value="Entity 2">Entity 2</option>
+            <option value="Entity 3">Entity 3</option>
+        </select>
+    </div>
+    <div class="input-field">
+        <label for="assignedClinic">Assigned Clinic:</label>
+        <select id="assignedClinic">
+            <option value="Clinic A">Clinic A</option>
+            <option value="Clinic B">Clinic B</option>
+            <option value="Clinic C">Clinic C</option>
+        </select>
+    </div>
+    <div class="input-field">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName">
+    </div>
+    <div class="input-field">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName">
+    </div>
+    <div class="input-field">
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="Category 1">Category 1</option>
+            <option value="Category 2">Category 2</option>
+            <option value="Category 3">Category 3</option>
+        </select>
+    </div>
+    <div class="input-field">
+        <label for="contractStartDate">Contract Start Date:</label>
+        <input type="date" id="contractStartDate">
+    </div>
+    <div class="input-field">
+        <label for="contractEndDate">Contract End Date:</label>
+        <input type="date" id="contractEndDate">
+    </div>
+    <div class="input-field">
+        <label for="absenceStart">Long-term Absence Start:</label>
+        <input type="date" id="absenceStart">
+    </div>
+    <div class="input-field">
+        <label for="absenceEnd">Long-term Absence End:</label>
+        <input type="date" id="absenceEnd">
+    </div>
+    <div class="input-field">
+        <label for="absenceType">Type of Absences:</label>
+        <select id="absenceType">
+            <option value="Sick Leave">Sick Leave</option>
+            <option value="Maternity Leave">Maternity Leave</option>
+            <option value="Personal Leave">Personal Leave</option>
+        </select>
+    </div>
+    <div class="input-field">
+        <label for="dailyHours">Contractual Daily Work Hours:</label>
+        <input type="number" id="dailyHours">
+    </div>
+    <div class="input-field">
+        <label for="vacationDays">Vacation Days x Year:</label>
+        <input type="number" id="vacationDays">
+    </div>
+    <div class="input-field">
+        <label for="contractType">Type of Contract:</label>
+        <select id="contractType">
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Contractor">Contractor</option>
+        </select>
+    </div>
+    <div class="input-field">
+        <label for="splitPercentage">Split %:</label>
+        <input type="number" id="splitPercentage">
+    </div>
+    <div class="button-container">
+        <button onclick="addEmployee()">Add Employee</button>
+        <button onclick="exportToExcel()">Export to Excel</button>
+        <button onclick="deleteSelectedEmployee()">Delete Selected Employee</button>
+    </div>
+    
+    <table id="employeeTable">
+        <thead>
+        <tr>
+            <th>Select</th>
+            <th>Worker ID</th>
+            <th>Legal Entity</th>
+            <th>Assigned Clinic</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Category</th>
+            <th>Contract Start Date</th>
+            <th>Contract End Date</th>
+            <th>Long-term Absence Start</th>
+            <th>Long-term Absence End</th>
+            <th>Type of Absences</th>
+            <th>Contractual Daily Work Hours</th>
+            <th>Vacation Days x Year</th>
+            <th>Type of Contract</th>
+            <th>Split %</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Employees will be added here -->
+        </tbody>
+    </table>
+</div>
+<script src="employee_scripts.js"></script>
+</body>
+</html>
